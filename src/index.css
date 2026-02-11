@@ -9,6 +9,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0f172a;
+}
+
+/* 안드로이드 앱 크기 프레임 (390 x 844 기준) */
+.phone-frame {
+  width: 100%;
+  max-width: 390px;
+  min-height: 100dvh;
+  height: 100dvh;
+  max-height: 844px;
+  margin: 0 auto;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 12px #1e293b,
+    0 0 0 14px #334155,
+    0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 @layer utilities {

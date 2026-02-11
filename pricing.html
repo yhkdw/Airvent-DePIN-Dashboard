@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airvent DePIN - 요금제 선택</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; color: transparent; background-image: linear-gradient(to right, #34d399, #22d3ee); }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen selection:bg-emerald-500 selection:text-white">
+
+    <nav class="flex items-center justify-between px-6 py-5 border-b border-slate-800/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-2 text-xl font-bold">
+            <i data-lucide="wind" class="text-emerald-400"></i> 
+            <span>Airvent <span class="text-xs bg-emerald-600 px-2 py-0.5 rounded text-white font-light">DePIN</span></span>
+        </div>
+        <button class="px-5 py-2 text-sm font-bold bg-white/10 hover:bg-white/20 rounded-full transition-all">
+            로그인
+        </button>
+    </nav>
+
+    <header class="pt-20 pb-10 px-6 text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold mb-6 border border-emerald-500/20">
+            <i data-lucide="zap" size="12"></i> 2026년 1월 한정: 사전 예약 프로모션
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            초기 비용 부담 없이<br>
+            <span class="gradient-text">데이터 자산(Data Asset)</span>을 소유하세요
+        </h1>
+        <p class="text-slate-400 text-lg">
+            에어벤트 노드는 단순한 공기청정기가 아닙니다.<br>
+            설치하는 순간부터 암호화폐(AVT)를 채굴하는 <b>수익형 가전</b>입니다.
+        </p>
+    </header>
+
+    <section class="px-6 pb-24 max-w-5xl mx-auto">
+        
+        <div class="flex justify-center mb-12">
+            <div class="bg-slate-900 p-1 rounded-full border border-slate-800 flex relative cursor-pointer" onclick="togglePlan()">
+                <div id="toggle-bg" class="absolute top-1 bottom-1 w-[50%] bg-emerald-600 rounded-full transition-all duration-300 left-1"></div>
+                <button id="btn-rental" class="relative z-10 px-8 py-3 rounded-full text-sm font-bold text-white transition-all w-40">
+                    구독형 (0원)
+                </button>
+                <button id="btn-purchase" class="relative z-10 px-8 py-3 rounded-full text-sm font-bold text-slate-400 transition-all w-40">
+                    소유형 (구매)
+                </button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-900/50 backdrop-blur-sm rounded-3xl p-8 border border-slate-700 shadow-2xl">
+            
+            <div class="space-y-6">
+                <div>
+                    <span id="plan-badge" class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold">RECOMMENDED</span>
+                    <h2 id="plan-title" class="text-3xl font-bold mt-4 mb-2">가벼운 구독 플랜</h2>
+                    <p id="plan-desc" class="text-slate-400 text-sm">초기 비용 0원으로 바로 채굴을 시작하세요. 언제든 해지 가능.</p>
+                </div>
+                
+                <div class="bg-emerald-900/10 border border-emerald-500/20 rounded-xl p-5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10"><i data-lucide="coins" size="48"></i></div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-emerald-200">예상 채굴 보상 차감 시</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-slate-400 text-sm">실질 체감 비용</span>
+                        <span id="plan-profit" class="text-2xl font-bold text-emerald-400">+ ₩ 5,100 이익</span>
+                    </div>
+                    <p id="plan-profit-desc" class="text-xs text-emerald-600/70 mt-2">
+                        *구독료(19,900원)를 내고도 남는 수익입니다.
+                    </p>
+                </div>
+
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-emerald-500 w-4"></i> 실시간 공기질 데이터 수익화</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-emerald-500 w-4"></i> H2S/TVOC 초정밀 센서 탑재</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-emerald-500 w-4"></i> 1년 무상 A/S 및 필터 교체</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 text-right flex flex-col justify-center h-full">
+                
+                <div class="mb-6 space-y-4 border-b border-slate-800 pb-6">
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-400">기기 가격 (초기 비용)</span>
+                        <span id="price-device" class="text-xl font-bold text-white">₩ 0</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-400">월 서비스 이용료</span>
+                        <span id="price-monthly" class="text-xl font-bold text-white">₩ 19,900 <span class="text-xs font-normal text-slate-500">/ 월</span></span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div id="total-price-display" class="text-4xl font-bold text-white mb-2">₩ 0 <span class="text-lg text-slate-500 font-normal">시작</span></div>
+                    <p id="total-price-sub" class="text-xs text-slate-500 mb-6">30일 무료 체험 후 결제됩니다.</p>
+                    
+                    <button class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-lg shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2 group transition-all">
+                        <span id="btn-cta">지금 0원으로 시작하기</span>
+                        <i data-lucide="chevron-right" class="group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    <p class="text-[10px] text-slate-600 mt-4">
+                        * DePIN 보상은 네트워크 상황에 따라 변동될 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 아이콘 실행
+        lucide.createIcons();
+
+        let isRental = true; // 현재 상태 (true: 구독, false: 구매)
+
+        function togglePlan() {
+            isRental = !isRental; // 상태 반전
+
+            // 요소 가져오기
+            const toggleBg = document.getElementById('toggle-bg');
+            const btnRental = document.getElementById('btn-rental');
+            const btnPurchase = document.getElementById('btn-purchase');
+            
+            // 텍스트 요소들
+            const planTitle = document.getElementById('plan-title');
+            const planDesc = document.getElementById('plan-desc');
+            const planProfit = document.getElementById('plan-profit');
+            const planProfitDesc = document.getElementById('plan-profit-desc');
+            const priceDevice = document.getElementById('price-device');
+            const priceMonthly = document.getElementById('price-monthly');
+            const totalPriceDisplay = document.getElementById('total-price-display');
+            const totalPriceSub = document.getElementById('total-price-sub');
+            const btnCta = document.getElementById('btn-cta');
+            const planBadge = document.getElementById('plan-badge');
+
+            if (isRental) {
+                // 구독형 디자인 적용
+                toggleBg.style.left = '4px';
+                btnRental.classList.replace('text-slate-400', 'text-white');
+                btnPurchase.classList.replace('text-white', 'text-slate-400');
+                
+                // 내용 변경
+                planBadge.innerText = "RECOMMENDED";
+                planBadge.className = "px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold";
+                planTitle.innerText = "가벼운 구독 플랜";
+                planDesc.innerText = "초기 비용 0원으로 바로 채굴을 시작하세요. 언제든 해지 가능.";
+                
+                planProfit.innerText = "+ ₩ 5,100 이익";
+                planProfitDesc.innerText = "*구독료(1.9만)를 내고도 남는 수익입니다.";
+                
+                priceDevice.innerText = "₩ 0";
+                priceMonthly.innerHTML = "₩ 19,900 <span class='text-xs font-normal text-slate-500'>/ 월</span>";
+                
+                totalPriceDisplay.innerHTML = "₩ 0 <span class='text-lg text-slate-500 font-normal'>시작</span>";
+                totalPriceSub.innerText = "30일 무료 체험 후 결제됩니다.";
+                btnCta.innerText = "지금 0원으로 시작하기";
+
+            } else {
+                // 소유형(구매) 디자인 적용
+                toggleBg.style.left = 'calc(50% - 4px)'; // 오른쪽으로 이동
+                btnRental.classList.replace('text-white', 'text-slate-400');
+                btnPurchase.classList.replace('text-slate-400', 'text-white');
+
+                // 내용 변경
+                planBadge.innerText = "BEST VALUE";
+                planBadge.className = "px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-bold";
+                planTitle.innerText = "평생 소유 플랜";
+                planDesc.innerText = "기기를 소유하고 월 고정비 없이 수익을 100% 가져가세요.";
+                
+                planProfit.innerText = "+ ₩ 25,000 이익";
+                planProfitDesc.innerText = "*기기값(29.9만) 회수 예상 기간: 12개월";
+                
+                priceDevice.innerText = "₩ 299,000";
+                priceMonthly.innerText = "₩ 0";
+                
+                totalPriceDisplay.innerText = "₩ 299,000";
+                totalPriceSub.innerText = "평생 소유, 추가 월 비용 없음";
+                btnCta.innerText = "구매하고 평생 수익내기";
+            }
+        }
+    </script>
+</body>
+</html>
