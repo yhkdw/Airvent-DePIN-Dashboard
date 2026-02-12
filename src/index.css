@@ -9,27 +9,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 55%);
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.phone-frame {
+  width: 100%;
+  max-width: 420px;
+  min-height: 860px;
+  height: 92dvh;
+  max-height: 900px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  box-shadow:
+    0 0 0 8px #0f172a,
+    0 20px 60px rgba(2, 6, 23, 0.8);
   background: #0f172a;
 }
 
-/* 안드로이드 앱 크기 프레임 (390 x 844 기준) */
-.phone-frame {
-  width: 100%;
-  max-width: 390px;
-  min-height: 100dvh;
-  height: 100dvh;
-  max-height: 844px;
-  margin: 0 auto;
-  border-radius: 36px;
-  overflow: hidden;
-  box-shadow: 
-    0 0 0 12px #1e293b,
-    0 0 0 14px #334155,
-    0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 0;
+  }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-depin-neon-green to-depin-neon-blue;
+  .phone-frame {
+    border-radius: 0;
+    border: none;
+    min-height: 100dvh;
+    height: 100dvh;
+    max-height: none;
+    max-width: none;
+    box-shadow: none;
   }
 }
