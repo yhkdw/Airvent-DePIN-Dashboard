@@ -11,11 +11,13 @@ const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => voi
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Allow any non-empty input for demo purposes
-        if (email.length > 0 && password.length > 0) {
+        const validEmail = import.meta.env.VITE_JUDGE_EMAIL;
+        const validPassword = import.meta.env.VITE_JUDGE_PASSWORD;
+
+        if (email === validEmail && password === validPassword) {
             onLogin();
         } else {
-            setError('아이디와 비밀번호를 입력해주세요.');
+            setError('테스트 계정 정보가 일치하지 않습니다.');
         }
     };
 
