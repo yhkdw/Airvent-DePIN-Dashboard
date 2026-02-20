@@ -26,19 +26,19 @@ export default function ProductSpecs() {
                         <ul className="space-y-3 mb-8">
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                PM2.5 / PM10 초미세먼지 센서
+                                4.3 inch Touch Screen / Real-time Monitoring
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                CO2 (이산화탄소) 모니터링
+                                PM1.0, PM2.5, PM10, CO2, TVOC, 온습도
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                온습도 (Temperature & Humidity)
+                                Wi-Fi 6 Mesh Network Support
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                Standard Reward Rate (1x)
+                                Earn Crypto Tokens Daily
                             </li>
                         </ul>
 
