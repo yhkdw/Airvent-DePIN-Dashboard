@@ -1,9 +1,0 @@
-{
-  "name": "airvent-node-simulator",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "start": "node simulator.js",
-    "simulate": "node simulator.js"
-  }
-}
