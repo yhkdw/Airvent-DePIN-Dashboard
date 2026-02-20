@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
+import ProductSpecs from "../components/ProductSpecs";
 
 export default function LandingPage() {
   const [mode, setMode] = useState<"subscription" | "ownership">("subscription");
@@ -65,6 +66,8 @@ export default function LandingPage() {
                   기존 공기질 측정기는 비싸고 데이터 신뢰성이 부족합니다.
                   AirVent는 **구독형(0원 시작)** 모델과 **AI 검증** 기술로 누구나 쉽게 참여하고 보상받는 생태계를 만듭니다.
                 </p>
+
+                <ProductSpecs />
 
                 <div className="flex justify-center gap-4 mb-12">
                   <button
