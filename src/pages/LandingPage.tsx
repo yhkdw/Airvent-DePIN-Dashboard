@@ -24,14 +24,17 @@ export default function LandingPage() {
       plans: [
         {
           name: "무료 (Free)",
+          credits: 800,
           perks: ["공개 익스플로러 + 에어배지", "개인 대시보드(기본)", "베타(미션/리퍼럴) 참여 가능", "업그레이드 시 구매 크레딧 적립"]
         },
         {
           name: "프로 (Pro)",
+          credits: 2800,
           perks: ["고급 인사이트", "우선 알림", "더 빠른 크레딧 적립"]
         },
         {
           name: "옵스 (Ops)",
+          credits: 8000,
           perks: ["멀티사이트 운영 기능", "CSV 내보내기/정책", "조직 크레딧 뱅크"]
         }
       ],
@@ -64,14 +67,17 @@ export default function LandingPage() {
       plans: [
         {
           name: "Free",
+          credits: 800,
           perks: ["Public Explorer + AirBadge", "Personal Dashboard (Basic)", "Beta Access (Missions/Referral)", "Credits accrue upon upgrade"]
         },
         {
           name: "Pro",
+          credits: 2800,
           perks: ["Advanced Insights", "Priority Alerts", "Faster Credit Accumulation"]
         },
         {
           name: "Ops",
+          credits: 8000,
           perks: ["Multi-site Operations", "CSV Export/Policy", "Org Credit Bank"]
         }
       ],
@@ -169,17 +175,14 @@ export default function LandingPage() {
                         {
                           ...text.plans[0],
                           price: 0,
-                          credits: 800,
                         },
                         {
                           ...text.plans[1],
                           price: 1900,
-                          credits: 2800,
                         },
                         {
                           ...text.plans[2],
                           price: 4900,
-                          credits: 8000,
                         }
                       ].map((p, i) => (
                         <div key={i} className="rounded-2xl bg-slate-950/50 p-6 border border-slate-800 backdrop-blur-sm hover:border-indigo-500/30 transition">
