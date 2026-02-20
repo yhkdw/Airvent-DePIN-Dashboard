@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Wind, Activity, Wallet, Cpu, Zap, ChevronRight, LogOut, LayoutDashboard, BrainCircuit, ShieldCheck, AlertCircle } from 'lucide-react';
+import { login } from '../auth';
 
 // --- 1. 로그인 페이지 ---
 const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => void }) => {
@@ -11,11 +11,9 @@ const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => voi
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        const validEmail = import.meta.env.VITE_JUDGE_EMAIL;
-        const validPassword = import.meta.env.VITE_JUDGE_PASSWORD;
 
-        // Strict validation: must match and must not be empty/missing
-        if (validEmail && validPassword && email === validEmail && password === validPassword) {
+        // Use the centralized login function
+        if (login(email, password)) {
             onLogin();
         } else {
             setError('계정 정보가 일치하지 않습니다.');

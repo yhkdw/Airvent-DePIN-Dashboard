@@ -1,6 +1,7 @@
 // Credentials are managed via .env
-export const TEST_EMAIL = import.meta.env.VITE_JUDGE_EMAIL || "";
-export const TEST_PASSWORD = import.meta.env.VITE_JUDGE_PASSWORD || "";
+// We trim and lowercase here for consistency
+export const TEST_EMAIL = (import.meta.env.VITE_JUDGE_EMAIL || "").trim().toLowerCase();
+export const TEST_PASSWORD = (import.meta.env.VITE_JUDGE_PASSWORD || "").trim();
 
 const KEY = "airvent_auth_v1";
 
@@ -9,12 +10,20 @@ export function isAuthed(): boolean {
 }
 
 export function login(email: string, password: string): boolean {
-  // REQUIRE specific credentials. Do not allow empty env vars to match empty inputs.
-  if (!TEST_EMAIL || !TEST_PASSWORD) return false;
+  // REQUIRE specific credentials. Handle local missing env as well.
+  if (!TEST_EMAIL || !TEST_PASSWORD) {
+    console.error("Critical: Auth credentials missing in .env or environment!");
+    return false;
+  }
 
-  const ok = email.trim().toLowerCase() === TEST_EMAIL && password === TEST_PASSWORD;
+  const inputEmail = email.trim().toLowerCase();
+  const inputPassword = password.trim();
 
-  if (ok) localStorage.setItem(KEY, "1");
+  const ok = inputEmail === TEST_EMAIL && inputPassword === TEST_PASSWORD;
+
+  if (ok) {
+    localStorage.setItem(KEY, "1");
+  }
   return ok;
 }
 
