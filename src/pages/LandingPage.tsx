@@ -147,7 +147,9 @@ export default function LandingPage() {
                   <span className="text-sky-400">{text.heroTitleSuffix}</span> {text.heroTitleEnd}
                 </h1>
                 <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto whitespace-pre-line">
-                  {text.heroDesc.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
+                  {text.heroDesc.split(/\*\*(.*?)\*\*/g).map((part, i) =>
+                    i % 2 === 1 ? <strong key={i} className="text-emerald-400 font-bold">{part}</strong> : part
+                  )}
                 </p>
 
                 <ProductSpecs lang={lang} />
