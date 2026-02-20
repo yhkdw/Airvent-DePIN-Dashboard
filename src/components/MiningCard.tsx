@@ -4,8 +4,9 @@ import Badge from "./Badge";
 export default function MiningCard() {
     const [points, setPoints] = useState(1250);
     const [progress, setProgress] = useState(0);
-    const [status, setStatus] = useState<"MINING" | "VALIDATING" | "MINTED">("MINING");
-    const [blockHash, setBlockHash] = useState("0x...");
+    const [status, setStatus] = useState<"MINING" | "VALIDATING" | "SOLANA_CONFIRMED">("MINING");
+    const [blockHash, setBlockHash] = useState("Waiting...");
+    const [solanaTx, setSolanaTx] = useState("");
 
     // Mining loop
     useEffect(() => {
@@ -31,12 +32,17 @@ export default function MiningCard() {
             setStatus("VALIDATING");
         } else {
             // Just hit 100 (or reset)
-            if (status !== "MINTED") {
-                setStatus("MINTED");
+            if (status !== "SOLANA_CONFIRMED") {
+                setStatus("SOLANA_CONFIRMED");
                 // Mint points!
                 const reward = Math.floor(Math.random() * 5) + 5;
                 setPoints(p => p + reward);
                 setBlockHash("0x" + Math.random().toString(16).substr(2, 8));
+                // Simulate Solana TxID
+                const chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+                let tx = "";
+                for (let i = 0; i < 8; i++) tx += chars.charAt(Math.floor(Math.random() * chars.length));
+                setSolanaTx(tx + "...");
             }
         }
     }, [progress, status]);
@@ -45,7 +51,7 @@ export default function MiningCard() {
     const getStatusColor = () => {
         if (status === "MINING") return "bg-sky-500";
         if (status === "VALIDATING") return "bg-amber-500";
-        return "bg-emerald-500";
+        return "bg-purple-500"; // Solana Purple
     };
 
     return (
@@ -60,11 +66,11 @@ export default function MiningCard() {
             <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                     <div>
-                        <div className="text-xs text-slate-400 font-bold tracking-wider">REWARD MINING</div>
+                        <div className="text-xs text-slate-400 font-bold tracking-wider">SOLANA REWARD MINING</div>
                         <div className="text-lg font-semibold text-slate-100">AirVent Point (AVP)</div>
                     </div>
-                    <Badge tone={status === "MINING" ? "info" : status === "VALIDATING" ? "warn" : "ok"}>
-                        {status}
+                    <Badge tone={status === "MINING" ? "info" : status === "VALIDATING" ? "warn" : "solana"}>
+                        {status === "SOLANA_CONFIRMED" ? "SOLANA VERIFIED" : status}
                     </Badge>
                 </div>
 
@@ -92,6 +98,10 @@ export default function MiningCard() {
                     <div className="flex justify-between">
                         <span>Last Block Hash:</span>
                         <span className="text-emerald-500">{blockHash}</span>
+                    </div>
+                    <div className="mt-1 flex justify-between">
+                        <span>Solana TxID:</span>
+                        <span className="text-purple-400 font-mono tracking-tight">{solanaTx || "Pending..."}</span>
                     </div>
                     <div className="mt-1 flex justify-between">
                         <span>Validator:</span>

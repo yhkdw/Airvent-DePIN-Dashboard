@@ -4,7 +4,7 @@ import Badge from "./Badge";
 type AiEvent = {
   ts: string;
   message: string;
-  badge: "INFO" | "WARN" | "PASS";
+  badge: "INFO" | "WARN" | "PASS" | "SOLANA";
 };
 
 type Step = {
@@ -27,7 +27,8 @@ export default function AiVerificationPanel({
       { badge: "INFO", message: "데이터 정상 수집 중..." },
       { badge: "INFO", message: "GPT-5.2 에이전트가 패턴을 요약 중입니다..." },
       { badge: "WARN", message: "어뷰징/조작 가능성 스캔 중..." },
-      { badge: "PASS", message: "검증 완료: 보상 지급 트리거" },
+      { badge: "INFO", message: "데이터 Hashing 및 Solana 블록체인 전송 중..." },
+      { badge: "SOLANA", message: "Solana 저장 완료: 위변조 불가 (Tamper-proof)" },
     ],
     [],
   );
@@ -52,11 +53,15 @@ export default function AiVerificationPanel({
 
       const step = steps[next];
 
-      // PASS일 때 리워드 지급 (Demo)
-      if (step.badge === "PASS") {
+      // SOLANA 저장 완료 시 리워드 지급
+      if (step.badge === "SOLANA") {
         const amt = Math.round((0.03 + Math.random() * 0.05) * 100) / 100; // 0.03~0.08
         onReward(amt);
-        step.message = `검증 완료: 보상 획득!`;
+        // Generate random Solana Tx
+        const chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+        let tx = "";
+        for (let i = 0; i < 8; i++) tx += chars.charAt(Math.floor(Math.random() * chars.length));
+        step.message = `Solana 저장 완료 (TxID: ${tx}...)`;
       }
 
       setEvents((prev) => [
@@ -71,7 +76,7 @@ export default function AiVerificationPanel({
   const cur = steps[idx];
 
   const badgeTone =
-    cur.badge === "PASS" ? "ok" : cur.badge === "WARN" ? "warn" : "info";
+    cur.badge === "SOLANA" ? "solana" : cur.badge === "PASS" ? "ok" : cur.badge === "WARN" ? "warn" : "info";
 
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
