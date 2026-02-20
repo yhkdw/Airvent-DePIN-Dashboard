@@ -1,5 +1,6 @@
-export const TEST_EMAIL = "judge@primer.kr";
-export const TEST_PASSWORD = "airvent2026";
+// Credentials are managed via .env
+export const TEST_EMAIL = import.meta.env.VITE_JUDGE_EMAIL || "";
+export const TEST_PASSWORD = import.meta.env.VITE_JUDGE_PASSWORD || "";
 
 const KEY = "airvent_auth_v1";
 
@@ -8,7 +9,7 @@ export function isAuthed(): boolean {
 }
 
 export function login(email: string, password: string): boolean {
-  // Allow any non-empty input or specific test credentials
+  // Allow any non-empty input or specific test credentials from env vars
   const ok =
     (email.length > 0 && password.length > 0) ||
     (email.trim().toLowerCase() === TEST_EMAIL && password === TEST_PASSWORD);
