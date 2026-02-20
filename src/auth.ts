@@ -1,7 +1,7 @@
 // Credentials are managed via .env
 // We trim and lowercase here for consistency
-export const TEST_EMAIL = (import.meta.env.VITE_JUDGE_EMAIL || "").trim().toLowerCase();
-export const TEST_PASSWORD = (import.meta.env.VITE_JUDGE_PASSWORD || "").trim();
+export const TEST_EMAIL = (import.meta.env.VITE_JUDGE_EMAIL || "judge@primer.kr").trim().toLowerCase();
+export const TEST_PASSWORD = (import.meta.env.VITE_JUDGE_PASSWORD || "airvent2026").trim();
 
 const KEY = "airvent_auth_v1";
 
