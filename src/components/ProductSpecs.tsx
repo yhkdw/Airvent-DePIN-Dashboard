@@ -24,7 +24,7 @@ export default function ProductSpecs() {
                             <img src="/airvent_pro.png" alt="AirVent Pro 4.3 inch" className="h-full w-full object-contain relative z-10 drop-shadow-2xl" />
                         </div>
 
-                        <ul className="space-y-3 mb-8">
+                        <ul className="space-y-3">
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                                 4.3 inch Touch Screen / Real-time Monitoring
@@ -42,10 +42,6 @@ export default function ProductSpecs() {
                                 Earn Crypto Tokens Daily
                             </li>
                         </ul>
-
-                        <button className="w-full py-3 rounded-xl bg-slate-800 text-slate-200 font-semibold hover:bg-slate-700 transition">
-                            View Details
-                        </button>
                     </div>
 
                     {/* AirVent Titan */}
@@ -60,7 +56,7 @@ export default function ProductSpecs() {
                             <img src="/airvent_titan.png" alt="AirVent Titan 7 inch" className="h-full w-full object-contain relative z-10 drop-shadow-2xl" />
                         </div>
 
-                        <ul className="space-y-3 mb-8">
+                        <ul className="space-y-3">
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                                 7 inch Touch Screen / Real-time Monitoring
@@ -78,9 +74,6 @@ export default function ProductSpecs() {
                                 <span className="text-purple-400 font-bold">Earn Crypto Tokens Daily (2x Rewards)</span>
                             </li>
                         </ul>
-                        <button className="w-full py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-500 transition shadow-lg shadow-purple-500/20">
-                            Pre-order Titan
-                        </button>
                     </div>
                 </div>
             </Container>
