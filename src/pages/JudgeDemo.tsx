@@ -14,10 +14,11 @@ const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => voi
         const validEmail = import.meta.env.VITE_JUDGE_EMAIL;
         const validPassword = import.meta.env.VITE_JUDGE_PASSWORD;
 
-        if (email === validEmail && password === validPassword) {
+        // Strict validation: must match and must not be empty/missing
+        if (validEmail && validPassword && email === validEmail && password === validPassword) {
             onLogin();
         } else {
-            setError('테스트 계정 정보가 일치하지 않습니다.');
+            setError('계정 정보가 일치하지 않습니다.');
         }
     };
 
