@@ -56,7 +56,7 @@ export default function AiVerificationPanel({
       if (step.badge === "PASS") {
         const amt = Math.round((0.03 + Math.random() * 0.05) * 100) / 100; // 0.03~0.08
         onReward(amt);
-        step.message = `검증 완료: 보상 +${amt} AiVT 지급`;
+        step.message = `검증 완료: 보상 획득!`;
       }
 
       setEvents((prev) => [
@@ -98,6 +98,25 @@ export default function AiVerificationPanel({
         <div className="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
           <div className="text-xs text-slate-400">어뷰징 스코어(Anomaly)</div>
           <div className="text-xl font-semibold">{anomaly}/100</div>
+        </div>
+      </div>
+
+      {/* ChatGPT Simulation */}
+      <div className="mt-4 rounded-xl bg-slate-950/60 border border-slate-800 p-3">
+        <div className="flex items-center gap-2 mb-2">
+          <div className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          </div>
+          <div className="text-xs text-slate-400 font-semibold">ChatGPT Analysis (Simulated)</div>
+        </div>
+        <div className="text-sm text-slate-300 leading-relaxed min-h-[60px]">
+          {idx === 0 ? (
+            <span className="text-slate-500 italic">데이터 분석 대기 중...</span>
+          ) : idx === 1 ? (
+            <span className="animate-pulse">패턴 분석 중...</span>
+          ) : (
+            "현재 공기질 데이터 패턴이 정상 범위입니다. 특이 사항이 발견되지 않았으며, 센서 신뢰도가 90% 이상으로 유지되고 있습니다."
+          )}
         </div>
       </div>
 

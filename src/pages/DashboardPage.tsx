@@ -8,6 +8,7 @@ import AiVerificationPanel from "../components/AiVerificationPanel";
 import { GasChart, PmChart } from "../components/Charts";
 import { getMockAirQualitySeries, downsampleByMinutes } from "../mock/airquality";
 import { logout } from "../auth";
+import MiningCard from "../components/MiningCard";
 
 export default function DashboardPage() {
   const nav = useNavigate();
@@ -58,18 +59,7 @@ export default function DashboardPage() {
               </div>
 
               <div className="lg:col-span-1 space-y-4">
-                <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
-                  <div className="text-xs text-slate-400">REWARDS</div>
-                  <div className="text-lg font-semibold">Mining Rewards</div>
-
-                  <div className="mt-3 rounded-xl border border-slate-800 bg-slate-950/40 p-3">
-                    <div className="text-xs text-slate-400">Current Balance</div>
-                    <div className="text-3xl font-bold mt-1">{balance.toFixed(2)} AiVT</div>
-                    <div className="text-xs text-slate-500 mt-1">
-                      AI 검증 완료(PASS) 이벤트 발생 시 자동 적립
-                    </div>
-                  </div>
-                </div>
+                <MiningCard />
 
                 <AiVerificationPanel
                   onReward={(amt) => setBalance((b) => Math.round((b + amt) * 100) / 100)}
