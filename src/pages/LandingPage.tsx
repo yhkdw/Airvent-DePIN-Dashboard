@@ -43,7 +43,9 @@ export default function LandingPage() {
       set3: "3대 세트",
       listPrice: "정가",
       globalDisclaimer: "구독자는 AirVent 크레딧으로 결제 소계의 최대 60%까지 사용할 수 있습니다.",
-      cta: "대시보드 시작하기"
+      cta: "대시보드 시작하기",
+      btnSubscription: "구독 시작하기",
+      btnNode: "노드 구매하기"
     },
     en: {
       headerSubtitle: "Hyperlocal Air Quality Network",
@@ -81,7 +83,9 @@ export default function LandingPage() {
       set3: "Set of 3",
       listPrice: "List Price",
       globalDisclaimer: "Subscribers can use AirVent credits for up to 60% of the payment subtotal.",
-      cta: "Start Dashboard"
+      cta: "Start Dashboard",
+      btnSubscription: "Start Subscription",
+      btnNode: "Buy Node"
     }
   };
 
@@ -197,9 +201,15 @@ export default function LandingPage() {
                     </div>
 
                     <div className="mt-12 border-t border-slate-800 pt-6">
-                      <div className="text-sm text-slate-500 max-w-2xl mx-auto">
+                      <div className="text-sm text-slate-500 max-w-2xl mx-auto mb-8">
                         {text.creditDisclaimer}
                       </div>
+                      <Link
+                        to="/login"
+                        className="inline-block rounded-xl bg-indigo-500 text-white font-bold px-8 py-3 text-lg hover:bg-indigo-400 transition shadow-lg shadow-indigo-500/20 transform hover:-translate-y-0.5"
+                      >
+                        {text.btnSubscription}
+                      </Link>
                     </div>
                   </div>
 
@@ -229,17 +239,15 @@ export default function LandingPage() {
                       ))}
                     </div>
 
-                    <div className="mt-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-4 text-center text-sm text-emerald-400 font-medium">
+                    <div className="mt-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-4 text-center text-sm text-emerald-400 font-medium mb-8">
                       {text.globalDisclaimer}
                     </div>
-                  </div>
 
-                  <div className="flex justify-center gap-4 mt-20">
                     <Link
                       to="/login"
-                      className="rounded-xl bg-emerald-500 text-slate-950 font-bold px-8 py-4 text-lg hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 transform hover:-translate-y-0.5"
+                      className="inline-block rounded-xl bg-emerald-500 text-slate-950 font-bold px-8 py-3 text-lg hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5"
                     >
-                      {text.cta}
+                      {text.btnNode}
                     </Link>
                   </div>
                 </div>
