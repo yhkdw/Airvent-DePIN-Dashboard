@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Wind, Activity, BrainCircuit, ShieldCheck, Zap, LayoutDashboard, LogOut, Wallet, ChevronRight } from 'lucide-react';
 import { login } from '../auth';
 
 // --- 1. 로그인 페이지 ---
