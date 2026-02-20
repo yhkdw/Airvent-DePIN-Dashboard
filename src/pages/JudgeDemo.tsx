@@ -33,13 +33,13 @@ const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => voi
                         <label className="block text-slate-400 text-sm mb-2">이메일 (Test ID)</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                             className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
-                            placeholder="judge@primer.kr" required />
+                            placeholder="Email" required />
                     </div>
                     <div>
                         <label className="block text-slate-400 text-sm mb-2">비밀번호 (Password)</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                             className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
-                            placeholder="airvent2026" required />
+                            placeholder="Password" required />
                     </div>
                     {error && <p className="text-red-400 text-sm">{error}</p>}
                     <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-lg transition-colors mt-4">
