@@ -25,11 +25,11 @@ export default function DashboardPage() {
           <div className="py-3 flex items-center justify-between gap-3">
             <div>
               <div className="text-xs text-slate-400">AirVent DePIN</div>
-              <div className="text-lg font-semibold">Operations Dashboard (Hackathon)</div>
+              <div className="text-lg font-semibold">Operations Dashboard</div>
             </div>
             <div className="flex items-center gap-2">
               <div className="hidden md:block text-right">
-                <div className="text-xs text-slate-400">Wallet (Demo)</div>
+                <div className="text-xs text-slate-400">Wallet</div>
                 <div className="text-sm font-semibold">{balance.toFixed(2)} AiVT</div>
               </div>
               <button
@@ -60,7 +60,7 @@ export default function DashboardPage() {
               <div className="lg:col-span-1 space-y-4">
                 <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
                   <div className="text-xs text-slate-400">REWARDS</div>
-                  <div className="text-lg font-semibold">Mining Rewards (Demo)</div>
+                  <div className="text-lg font-semibold">Mining Rewards</div>
 
                   <div className="mt-3 rounded-xl border border-slate-800 bg-slate-950/40 p-3">
                     <div className="text-xs text-slate-400">Current Balance</div>

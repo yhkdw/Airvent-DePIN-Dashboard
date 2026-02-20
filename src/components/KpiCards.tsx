@@ -36,7 +36,7 @@ export default function KpiCards({ latest }: { latest: AirPoint }) {
             {"extra" in it ? it.extra : `${it.v} ${it.u}`}
           </div>
           <div className="mt-1 text-xs text-slate-500">
-            {"extra" in it ? "Indoor comfort" : "Live (mock stream)"}
+            {"extra" in it ? "Indoor comfort" : "Live stream"}
           </div>
         </div>
       ))}

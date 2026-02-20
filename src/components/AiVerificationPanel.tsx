@@ -78,7 +78,7 @@ export default function AiVerificationPanel({
       <div className="flex items-center justify-between gap-3">
         <div>
           <div className="text-xs text-slate-400">AI DATA VERIFICATION</div>
-          <div className="text-lg font-semibold">OpenAI 검증 패널 (Demo)</div>
+          <div className="text-lg font-semibold">OpenAI 검증 패널</div>
         </div>
         <Badge tone={badgeTone}>{cur.badge}</Badge>
       </div>
@@ -119,9 +119,7 @@ export default function AiVerificationPanel({
         </div>
       </div>
 
-      <div className="mt-3 text-[11px] text-slate-500">
-        * Demo mode: 화면 연출용 시뮬레이션 UI. (실연동 시 OpenAI API로 데이터 검증)
-      </div>
+
     </div>
   );
 }
