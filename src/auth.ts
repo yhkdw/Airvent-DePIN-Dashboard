@@ -8,9 +8,11 @@ export function isAuthed(): boolean {
 }
 
 export function login(email: string, password: string): boolean {
+  // Simplified for Hackathon/Demo: Allow any non-empty input
+  // or specific test credentials
   const ok =
-    email.trim().toLowerCase() === TEST_EMAIL &&
-    password === TEST_PASSWORD;
+    (email.length > 0 && password.length > 0) ||
+    (email.trim().toLowerCase() === TEST_EMAIL && password === TEST_PASSWORD);
 
   if (ok) localStorage.setItem(KEY, "1");
   return ok;

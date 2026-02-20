@@ -4,8 +4,8 @@ import { login, TEST_EMAIL } from "../auth";
 
 export default function LoginPage() {
   const nav = useNavigate();
-  const [email, setEmail] = useState(TEST_EMAIL);
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("judge@primer.kr");
+  const [password, setPassword] = useState("airvent2026");
   const [error, setError] = useState("");
 
   return (
