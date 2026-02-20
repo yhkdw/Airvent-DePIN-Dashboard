@@ -19,8 +19,9 @@ export default function ProductSpecs() {
                     <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-8 backdrop-blur hover:border-emerald-500/50 transition duration-300">
                         <div className="text-xs font-bold text-emerald-500 mb-2">HOME & OFFICE</div>
                         <h3 className="text-2xl font-bold text-slate-100 mb-4">AirVent Pro</h3>
-                        <div className="h-40 bg-slate-900/50 rounded-xl mb-6 flex items-center justify-center border border-slate-800">
-                            <span className="text-slate-600 font-medium">Device Image</span>
+                        <div className="h-56 bg-white/5 rounded-xl mb-6 flex items-center justify-center border border-slate-800 overflow-hidden p-6 relative group-hover:border-emerald-500/30 transition">
+                            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+                            <img src="/airvent_pro.png" alt="AirVent Pro 4.3 inch" className="h-full w-full object-contain relative z-10 drop-shadow-2xl" />
                         </div>
 
                         <ul className="space-y-3 mb-8">
@@ -54,8 +55,9 @@ export default function ProductSpecs() {
                         </div>
                         <div className="text-xs font-bold text-purple-400 mb-2">INDUSTRIAL & LARGE SPACE</div>
                         <h3 className="text-2xl font-bold text-slate-100 mb-4">AirVent Titan</h3>
-                        <div className="h-40 bg-slate-900/50 rounded-xl mb-6 flex items-center justify-center border border-slate-800">
-                            <span className="text-slate-600 font-medium">Device Image</span>
+                        <div className="h-56 bg-white/5 rounded-xl mb-6 flex items-center justify-center border border-slate-800 overflow-hidden p-6 relative group-hover:border-purple-500/30 transition">
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+                            <img src="/airvent_titan.png" alt="AirVent Titan 7 inch" className="h-full w-full object-contain relative z-10 drop-shadow-2xl" />
                         </div>
 
                         <ul className="space-y-3 mb-8">
