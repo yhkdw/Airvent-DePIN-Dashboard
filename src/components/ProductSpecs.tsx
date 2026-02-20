@@ -61,22 +61,21 @@ export default function ProductSpecs() {
                         <ul className="space-y-3 mb-8">
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                High-Precision PM1.0 Sensor
+                                7 inch Touch Screen / Real-time Monitoring
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                TVOC (Total Volatile Organic Compounds)
+                                PM1.0, PM2.5, PM10, CO2, TVOC, 온습도
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                Formaldehyde (HCHO) Detection
+                                Wi-Fi 6 Mesh Network Support
                             </li>
                             <li className="flex items-center text-slate-300">
                                 <svg className="w-5 h-5 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                <span className="text-purple-400 font-bold">Double Reward Rate (2x)</span>
+                                <span className="text-purple-400 font-bold">Earn Crypto Tokens Daily (2x Rewards)</span>
                             </li>
                         </ul>
-
                         <button className="w-full py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-500 transition shadow-lg shadow-purple-500/20">
                             Pre-order Titan
                         </button>
