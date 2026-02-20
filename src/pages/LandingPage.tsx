@@ -169,7 +169,7 @@ export default function LandingPage() {
                         {
                           ...text.plans[0],
                           price: 0,
-                          credits: 0,
+                          credits: 800,
                         },
                         {
                           ...text.plans[1],
