@@ -23,8 +23,11 @@ export default function LoginPage() {
             e.preventDefault();
             setError("");
             const ok = login(email, password);
-            if (!ok) setError("계정 정보가 일치하지 않습니다.");
-            else nav("/dashboard");
+            if (!ok) {
+              setError("계정 정보가 일치하지 않거나 서버 설정이 올바르지 않습니다.");
+            } else {
+              nav("/dashboard");
+            }
           }}
         >
           <label className="block">
