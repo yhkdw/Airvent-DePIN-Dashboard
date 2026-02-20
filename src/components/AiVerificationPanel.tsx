@@ -25,7 +25,7 @@ export default function AiVerificationPanel({
   const steps: Step[] = useMemo(
     () => [
       { badge: "INFO", message: "데이터 정상 수집 중..." },
-      { badge: "INFO", message: "OpenAI 에이전트가 패턴을 요약 중입니다..." },
+      { badge: "INFO", message: "GPT-5.2 에이전트가 패턴을 요약 중입니다..." },
       { badge: "WARN", message: "어뷰징/조작 가능성 스캔 중..." },
       { badge: "PASS", message: "검증 완료: 보상 지급 트리거" },
     ],
@@ -78,7 +78,7 @@ export default function AiVerificationPanel({
       <div className="flex items-center justify-between gap-3">
         <div>
           <div className="text-xs text-slate-400">AI DATA VERIFICATION</div>
-          <div className="text-lg font-semibold">OpenAI 검증 패널</div>
+          <div className="text-lg font-semibold">GPT-5.2 검증 패널</div>
         </div>
         <Badge tone={badgeTone}>{cur.badge}</Badge>
       </div>
@@ -107,7 +107,7 @@ export default function AiVerificationPanel({
           <div className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center">
             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           </div>
-          <div className="text-xs text-slate-400 font-semibold">ChatGPT Analysis (Simulated)</div>
+          <div className="text-xs text-slate-400 font-semibold">GPT-5.2 Analysis (Simulated)</div>
         </div>
         <div className="text-sm text-slate-300 leading-relaxed min-h-[60px]">
           {idx === 0 ? (

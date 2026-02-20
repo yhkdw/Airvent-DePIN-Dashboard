@@ -10,7 +10,7 @@
 - 사용자는 대시보드를 켜두는 것만으로도 포인트가 쌓이는 시각적 피드백을 받습니다.
 
 ### 2. AI Data Verification (ChatGPT Simulation)
-- **AiVerificationPanel**: 수집된 공기질 데이터를 AI 에이전트(Simulated GPT-4o)가 실시간으로 분석합니다.
+- **AiVerificationPanel**: 수집된 공기질 데이터를 AI 에이전트(Simulated GPT-5.2)가 실시간으로 분석합니다.
 - 데이터 패턴에 따라 "환기 필요", "정상 범위" 등의 코멘트를 타이핑 효과와 함께 제공합니다.
 
 ### 3. Hyperlocal Air Quality Monitoring

@@ -95,7 +95,7 @@ export default function MiningCard() {
                     </div>
                     <div className="mt-1 flex justify-between">
                         <span>Validator:</span>
-                        <span>GPT-4o Agent</span>
+                        <span>GPT-5.2 Agent</span>
                     </div>
                 </div>
             </div>
