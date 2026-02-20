@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Wind, Activity, Wallet, Cpu, Zap, ChevronRight, LogOut, LayoutDashboard, BrainCircuit, ShieldCheck, AlertCircle } from 'lucide-react';
 
-// --- 1. 로그인 페이지 (심사위원 전용) ---
+// --- 1. 로그인 페이지 ---
 const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => void }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -30,13 +30,13 @@ const LoginPage = ({ onLogin, onBack }: { onLogin: () => void, onBack: () => voi
                 </div>
                 <form onSubmit={handleLogin} className="space-y-4">
                     <div>
-                        <label className="block text-slate-400 text-sm mb-2">이메일 (Test ID)</label>
+                        <label className="block text-slate-400 text-sm mb-2">이메일</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                             className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
                             placeholder="Email" required />
                     </div>
                     <div>
-                        <label className="block text-slate-400 text-sm mb-2">비밀번호 (Password)</label>
+                        <label className="block text-slate-400 text-sm mb-2">비밀번호</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                             className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
                             placeholder="Password" required />
@@ -148,7 +148,7 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => 
             <nav className="flex items-center justify-between px-6 py-4 border-b border-slate-800/50 sticky top-0 z-50 bg-slate-950/80 backdrop-blur">
                 <div className="flex items-center gap-2 font-bold text-xl"><Wind className="text-emerald-400" /> Airvent <span className="text-sm font-light text-slate-400">DePIN</span></div>
                 <button onClick={() => onNavigate('login')} className="px-5 py-2 text-sm font-bold bg-white/10 hover:bg-white/20 rounded-full transition-all">
-                    로그인 (심사위원용)
+                    로그인
                 </button>
             </nav>
 

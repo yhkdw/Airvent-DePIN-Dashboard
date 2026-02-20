@@ -26,7 +26,3 @@
 npm install
 npm run dev
 ```
-
-## Test Accounts
-- **Email**: `judge@primer.kr`
-- **Password**: `airvent2026`
