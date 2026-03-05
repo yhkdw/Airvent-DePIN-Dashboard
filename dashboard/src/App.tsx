@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
 import JudgeDemo from "./pages/JudgeDemo";
+import NodeDetailPage from "./pages/NodeDetailPage";
 import RequireAuth from "./components/RequireAuth";
 
 // Dashboard tabs
@@ -16,6 +17,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/node" element={<NodeDetailPage />} />
 
       <Route element={<RequireAuth />}>
         <Route path="/dashboard" element={<DashboardPage />}>
