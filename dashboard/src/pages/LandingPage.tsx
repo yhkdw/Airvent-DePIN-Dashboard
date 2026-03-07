@@ -229,8 +229,10 @@ export default function LandingPage() {
             {/* Nav */}
             <nav className="hidden md:flex items-center gap-6">
               <a href="#problems" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{lang === "ko" ? "소개" : "About"}</a>
-              <a href="#participation" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{lang === "ko" ? "참여하기" : "Join"}</a>
               <Link to="/node" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{tx.nav.node}</Link>
+              <Link to="/dashboard" className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 hover:bg-emerald-500/20 transition-all">
+                {lang === "ko" ? "대시보드 Demo" : "Dashboard Demo"}
+              </Link>
               {isLocal && (
                 <Link to="/judge" className="text-[10px] font-black text-sky-400 hover:text-sky-300 border border-sky-400/20 bg-sky-400/5 px-2.5 py-1.5 rounded-lg uppercase tracking-wider flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
@@ -439,26 +441,6 @@ export default function LandingPage() {
           </Container>
         </section>
 
-        {/* ── Participation Options ── */}
-        <section id="participation" className="py-24 bg-slate-900/30 border-t border-slate-800/50">
-          <Container>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">참여 신청하기</h2>
-              <p className="text-slate-400">원하시는 방식을 선택하여 AirVent의 시작에 함께하세요.</p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {participationOptions.map((opt, i) => (
-                <div key={i} className={`p-8 rounded-3xl border flex flex-col ${opt.featured ? "border-emerald-500 bg-emerald-500/5 shadow-lg shadow-emerald-500/5" : "border-slate-800 bg-slate-950"}`}>
-                  <h3 className="text-xl font-bold text-white mb-4">{opt.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{opt.desc}</p>
-                  <button className={`w-full py-4 rounded-xl font-bold text-sm transition ${opt.featured ? "bg-emerald-500 text-slate-950 hover:bg-emerald-400" : "bg-slate-800 text-white hover:bg-slate-700"}`}>
-                    {opt.cta}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </Container>
-        </section>
 
         {/* ── Proof & FAQ ── */}
         <section className="py-24 border-t border-slate-800/50">
