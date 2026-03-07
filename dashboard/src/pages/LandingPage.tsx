@@ -16,42 +16,7 @@ const t = {
     heroTitle: "실내 공기질을 측정하는 노드,\n이제 Testnet의 첫 기여자를 모집합니다",
     heroSub:
       "AirVent는 집·사무실·실내 공간의 공기질을 측정하는 스마트 노드입니다. 노드 출시와 Devnet 검증을 마친 지금, 제품 사용자이자 초기 네트워크 기여자로 함께할 첫 유저를 모집하고 있습니다.",
-    heroCta: "노드 구매하기",
-    heroCtaSec: "대시보드 둘러보기",
-    statsLabel: ["설치된 노드", "측정 도시", "네트워크 참여자", "지급된 AIVT"],
-    statsVal: ["1,200+", "48개", "3,400+", "2.1M+"],
-    howItWorksTitle: "Airvent-AI 작동 방식",
-    steps: [
-      { icon: "🔧", step: "STEP 01", title: "노드 설치", desc: "초정밀 Airvent 노드를 설치해 AI 기반 대기질 모니터링 네트워크에 참여합니다." },
-      { icon: "📡", step: "STEP 02", title: "실시간 데이터 수집", desc: "매 분마다 하이퍼로컬 대기질 데이터를 수집해 Solana 네트워크로 전송합니다." },
-      { icon: "🛡️", step: "STEP 03", title: "AI 검증", desc: "Airvent-AI가 ZK-Proof로 데이터 무결성을 실시간 감사·검증합니다." },
-      { icon: "💎", step: "STEP 04", title: "AIVT 리워드 지급", desc: "검증된 데이터 기여분에 대해 Solana 체인에서 즉시 토큰 보상을 받습니다." },
-    ],
-    partnerLabel: "파트너 & 생태계",
-    partners: ["Superteam Korea", "Solana Foundation", "Solana DePIN Hub", "Metaplex"],
-    testimonialLabel: "노드 운영자 후기",
-    testimonials: [
-      { name: "김지훈 · 서울 마포구", handle: "@jhkim_depin", text: "설치 30분 만에 데이터가 올라왔고, 일주일 만에 첫 AIVT를 수령했습니다. 생각보다 훨씬 간단해요.", avatar: "J" },
-      { name: "박소연 · 부산 해운대", handle: "@soyeon_air", text: "공기질 데이터가 실시간으로 보이는 게 신기하고, 리워드까지 받으니 설치 안 할 이유가 없네요.", avatar: "S" },
-      { name: "이민준 · 경기 수원", handle: "@minjun_node", text: "슈퍼팀코리아 행사에서 처음 알았는데, 팀 지원도 빠르고 커뮤니티도 활발합니다.", avatar: "M" },
-    ],
-    pricingLabel: "가격 & 플랜",
-    pricingTitle: "노드 구매 가격 (USD)",
-    pricingDesc: "얼리버드 혜택은 물량 소진 시 종료됩니다. 구독 크레딧으로 최대 60% 할인.",
-    pricing: [
-      { name: "Early Bird", price: "$349", tag: "인기", pro: true },
-      { name: "Standard", price: "$399", tag: "", pro: true },
-      { name: "3대 세트", price: "$899", tag: "최대 절약", pro: false },
-      { name: "정가", price: "$499", tag: "", pro: true },
-    ],
-    pricingCta: "노드 상세 보기 →",
-    newsLabel: "네트워크 소식",
-    newsTitle: "주요 업데이트",
-    news: [
-      { tag: "Partnership", date: "2026.02.24", title: "슈퍼팀코리아 파트너십", desc: "Solana 생태계 DePIN 솔루션 확장" },
-      { tag: "Roadmap", date: "2026.02.20", title: "2026 메인넷 로드맵 공개", desc: "차세대 고밀도 센서 네트워크 프로토콜" },
-      { tag: "Governance", date: "2026.02.15", title: "탈중앙화 거버넌스 예고", desc: "AIVT 홀더 투표 시스템 출시 예정" },
-    ],
+    heroCta: "참여하기",
     footerTagline: "Hyperlocal Air Quality Network — Powered by Solana",
     footerLinks: { docs: "문서", github: "GitHub", blog: "블로그", privacy: "개인정보처리방침", terms: "이용약관" },
   },
@@ -62,46 +27,174 @@ const t = {
     heroTitle: "A Node for Indoor Air Quality,\nRecruiting Testnet Early Contributors",
     heroSub:
       "AirVent is a smart node that measures air quality in homes, offices, and indoor spaces. Following our Devnet verification, we are now recruiting the first users to join as product users and early network contributors.",
-    heroCta: "Buy a Node",
-    heroCtaSec: "Explore Dashboard",
-    statsLabel: ["Nodes Installed", "Cities Covered", "Network Participants", "AIVT Distributed"],
-    statsVal: ["1,200+", "48", "3,400+", "2.1M+"],
-    howItWorksTitle: "How Airvent-AI Works",
-    steps: [
-      { icon: "🔧", step: "STEP 01", title: "Install Node", desc: "Deploy a precision Airvent node and join the AI-driven air quality monitoring network." },
-      { icon: "📡", step: "STEP 02", title: "Live Data Streaming", desc: "Hyperlocal air data is collected every minute and streamed to our Solana-secured network." },
-      { icon: "🛡️", step: "STEP 03", title: "AI Audit", desc: "Airvent-AI uses ZK-Proofs to audit and verify data integrity in real-time." },
-      { icon: "💎", step: "STEP 04", title: "Earn AIVT Rewards", desc: "Receive AIVT token rewards on Solana instantly for your verified data contributions." },
-    ],
-    partnerLabel: "PARTNERS & ECOSYSTEM",
-    partners: ["Superteam Korea", "Solana Foundation", "Solana DePIN Hub", "Metaplex"],
-    testimonialLabel: "NODE OPERATOR STORIES",
-    testimonials: [
-      { name: "Ji-hoon Kim · Seoul", handle: "@jhkim_depin", text: "Data was live within 30 minutes of setup, and I received my first AIVT within a week. Way simpler than expected.", avatar: "J" },
-      { name: "So-yeon Park · Busan", handle: "@soyeon_air", text: "Watching real-time air quality data from my neighborhood is fascinating — and earning rewards on top of that is a bonus.", avatar: "S" },
-      { name: "Min-jun Lee · Suwon", handle: "@minjun_node", text: "Found out at a Superteam Korea event. The team support is fast and the community is very active.", avatar: "M" },
-    ],
-    pricingLabel: "PRICING & PLANS",
-    pricingTitle: "Node Pricing (USD)",
-    pricingDesc: "Early Bird benefits end when stock runs out. Use subscription credits for up to 60% off.",
-    pricing: [
-      { name: "Early Bird", price: "$349", tag: "Popular", pro: true },
-      { name: "Standard", price: "$399", tag: "", pro: true },
-      { name: "Set of 3", price: "$899", tag: "Best Value", pro: false },
-      { name: "List Price", price: "$499", tag: "", pro: true },
-    ],
-    pricingCta: "View Node Details →",
-    newsLabel: "NETWORK NEWS",
-    newsTitle: "Latest Updates",
-    news: [
-      { tag: "Partnership", date: "2026.02.24", title: "Superteam Korea Partnership", desc: "Expanding DePIN solutions in the Solana ecosystem" },
-      { tag: "Roadmap", date: "2026.02.20", title: "2026 Mainnet Roadmap Released", desc: "Next-gen dense sensor network protocol announced" },
-      { tag: "Governance", date: "2026.02.15", title: "Decentralized Governance Preview", desc: "AIVT holder voting system coming soon" },
-    ],
+    heroCta: "Join Now",
     footerTagline: "Hyperlocal Air Quality Network — Powered by Solana",
     footerLinks: { docs: "Docs", github: "GitHub", blog: "Blog", privacy: "Privacy Policy", terms: "Terms of Service" },
   },
 } as const;
+
+/* ─────────────── Content Data ─────────────── */
+export const heroBadges = [
+  "Devnet Verified",
+  "Testnet Early Access",
+  "Indoor Air Quality Node",
+] as const;
+
+export const problems = [
+  "기존 공기질 측정기는 가격과 활용성이 아쉬워 대중화가 어렵습니다.",
+  "실내 공기 상태를 지속적으로 이해하고 이상을 빠르게 파악하기 어렵습니다.",
+  "데이터는 쌓여도 사용자에게 장기적인 가치나 참여 경험으로 연결되지 않습니다.",
+] as const;
+
+export const whyNowItems = [
+  {
+    title: "노드 출시 완료",
+    desc: "실제 사용 가능한 물리 노드 기준으로 초기 사용자 온보딩을 시작할 수 있는 단계입니다.",
+    icon: "radar",
+  },
+  {
+    title: "Devnet 검증 완료",
+    desc: "기초 동작, 데이터 흐름, 네트워크 연동의 핵심 검증을 마친 상태를 강조합니다.",
+    icon: "shield",
+  },
+  {
+    title: "초기 Testnet 모집",
+    desc: "지금은 대규모 판매보다 초기 기여자와 실사용 검증을 함께 쌓아가는 시기입니다.",
+    icon: "flask",
+  },
+] as const;
+
+export const howItWorksItems = [
+  {
+    step: "01",
+    title: "노드를 설치합니다",
+    desc: "집, 사무실, 매장 등 실내 공간에 간편하게 설치합니다.",
+    icon: "home",
+  },
+  {
+    step: "02",
+    title: "환경 데이터를 수집합니다",
+    desc: "온도, 습도, PM, CO₂ 등 실내 공기질 신호를 측정합니다.",
+    icon: "activity",
+  },
+  {
+    step: "03",
+    title: "데이터 품질을 검증합니다",
+    desc: "측정 데이터를 네트워크 관점에서 검토하고 신뢰도를 높여갑니다.",
+    icon: "shield",
+  },
+  {
+    step: "04",
+    title: "초기 기여자로 참여합니다",
+    desc: "Testnet 단계에서 실제 사용자이자 초기 네트워크 기여자로 합류합니다.",
+    icon: "wallet",
+  },
+] as const;
+
+export const audienceItems = [
+  {
+    title: "일반 사용자 / 얼리어답터",
+    icon: "wind",
+    points: [
+      "우리 집과 공간의 공기질을 눈으로 확인하고 싶은 분",
+      "이상 징후를 더 빠르게 감지하고 싶은 분",
+      "새로운 스마트 디바이스를 가장 먼저 써보고 싶은 분",
+    ],
+  },
+  {
+    title: "블록체인 / DePIN 사용자",
+    icon: "layers",
+    points: [
+      "실물 기반 데이터 네트워크의 시작점에 참여하고 싶은 분",
+      "Testnet 단계부터 프로젝트 성장에 함께하고 싶은 분",
+      "초기 기여 포지션을 선점하고 싶은 분",
+    ],
+  },
+] as const;
+
+export const timelineItems = [
+  "제품 설계 및 노드 준비",
+  "Devnet 검증 완료",
+  "Testnet 초기 유저 모집",
+  "실사용 데이터 · 후기 · 운영 증빙 순차 공개",
+  "네트워크 확장 및 참여 구조 고도화",
+] as const;
+
+export const benefitItems = [
+  "초기 Testnet 참여 경험",
+  "업데이트 및 커뮤니티 우선 접근",
+  "노드 운용 경험 축적",
+  "향후 공개될 기여 구조의 선점 효과",
+  "초기 사용자 포지션 확보",
+  "제품과 네트워크 발전 과정에 직접 관여",
+] as const;
+
+export const nodeCards = [
+  {
+    name: "AirVent Node",
+    desc: "실내 공기질 측정과 네트워크 참여를 동시에 고려한 스마트 노드",
+    specs: ["Indoor IAQ sensing", "Dashboard connected", "Early user ready"],
+  },
+  {
+    name: "AirVent Dashboard",
+    desc: "측정 흐름과 노드 상태를 확인하는 운영 화면의 시작점",
+    specs: ["Node overview", "Status monitoring", "Proof-ready structure"],
+  },
+] as const;
+
+export const proofItems = [
+  "초기 운영자 후기 공개 예정",
+  "실내 설치 사진 및 사용 사례 공개 예정",
+  "대시보드 측정 스냅샷 공개 예정",
+  "Testnet 운영/기여 데이터 공개 예정",
+  "추가 검증 리포트 순차 업데이트 예정",
+] as const;
+
+export const participationOptions = [
+  {
+    title: "관심 등록",
+    desc: "출시와 업데이트 소식을 먼저 받고 싶은 사용자용",
+    cta: "업데이트 받기",
+    featured: false,
+  },
+  {
+    title: "초기 유저 신청",
+    desc: "Testnet 참여 의향이 있는 사용자를 위한 온보딩 신청",
+    cta: "초기 유저 참여하기",
+    featured: true,
+  },
+  {
+    title: "노드 구매 / 예약",
+    desc: "실제 노드를 통해 더 깊게 참여하고 싶은 사용자용",
+    cta: "노드 상세 보기",
+    featured: false,
+  },
+  {
+    title: "파트너 / 기관 문의",
+    desc: "학교, 사무실, 기관 단위 적용이나 제휴 문의용",
+    cta: "문의하기",
+    featured: false,
+  },
+] as const;
+
+export const faqs = [
+  {
+    q: "AirVent는 어떤 제품인가요?",
+    a: "AirVent는 실내 공기질을 측정하는 스마트 노드이자, 검증 가능한 환경 데이터 네트워크의 초기 참여를 위한 진입점으로 설계된 제품입니다.",
+  },
+  {
+    q: "지금은 상용 출시인가요, Testnet 단계인가요?",
+    a: "현재는 노드 출시와 Devnet 검증을 마친 뒤 Testnet 초기 유저를 모집하는 단계입니다.",
+  },
+  {
+    q: "일반 사용자도 참여할 수 있나요?",
+    a: "가능합니다. 블록체인 지식이 없는 사용자도 공기질 측정과 제품 사용 관점에서 참여할 수 있도록 설계합니다.",
+  },
+  {
+    q: "후기와 운영 데이터는 언제 공개되나요?",
+    a: "초기 사용자 모집 이후 실사용 사례와 운영 데이터를 순차적으로 공개하는 구조로 계획하고 있습니다.",
+  },
+] as const;
 
 type Lang = keyof typeof t;
 
@@ -135,8 +228,8 @@ export default function LandingPage() {
 
             {/* Nav */}
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#how-it-works" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{tx.nav.howItWorks}</a>
-              <a href="#network-news" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{tx.nav.news}</a>
+              <a href="#problems" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{lang === "ko" ? "소개" : "About"}</a>
+              <a href="#participation" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{lang === "ko" ? "참여하기" : "Join"}</a>
               <Link to="/node" className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">{tx.nav.node}</Link>
               {isLocal && (
                 <Link to="/judge" className="text-[10px] font-black text-sky-400 hover:text-sky-300 border border-sky-400/20 bg-sky-400/5 px-2.5 py-1.5 rounded-lg uppercase tracking-wider flex items-center gap-1.5">
@@ -166,60 +259,80 @@ export default function LandingPage() {
 
       <main>
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden">
-          {/* Background glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/40 via-slate-950 to-slate-950 pointer-events-none" />
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden border-b border-slate-800/50">
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/20 via-slate-950 to-slate-950 pointer-events-none" />
           <Container>
-            <div className="relative py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-              {/* Text */}
+            <div className="relative py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs font-bold text-emerald-400 tracking-widest">{tx.heroEyebrow}</span>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {heroBadges.map((b, i) => (
+                    <span key={i} className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold border border-emerald-500/20 tracking-wider">
+                      {b}
+                    </span>
+                  ))}
                 </div>
-                <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 whitespace-pre-line">
+                <h1 className="text-4xl md:text-6xl font-black leading-tight mb-8 whitespace-pre-line tracking-tight">
                   {tx.heroTitle}
                 </h1>
-                <p className="text-lg text-slate-300 leading-relaxed mb-10 max-w-lg">
+                <p className="text-lg text-slate-400 leading-relaxed mb-10 max-w-lg">
                   {tx.heroSub}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link to="/node"
-                    className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 text-slate-950 font-bold px-7 py-4 text-base hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 transform">
-                    {tx.heroCta}
+                    className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 text-slate-950 font-bold px-8 py-4 text-base hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5">
+                    {lang === "ko" ? "초기 유저 참여하기" : "Join as Early User"}
                     <span>→</span>
                   </Link>
-                  <Link to={authenticated ? "/dashboard" : "/login"}
-                    className="inline-flex items-center gap-2 rounded-xl border border-slate-700 text-slate-300 font-semibold px-7 py-4 text-base hover:border-slate-500 hover:text-white transition">
-                    {authenticated ? (lang === "ko" ? "대시보드 시작" : "Go to Dashboard") : tx.heroCtaSec}
-                  </Link>
+                  <a href="#problems" className="inline-flex items-center gap-2 rounded-xl border border-slate-700 text-slate-400 font-semibold px-8 py-4 text-base hover:border-slate-500 hover:text-white transition">
+                    {lang === "ko" ? "더 알아보기" : "Learn More"}
+                  </a>
                 </div>
               </div>
 
-              {/* Product image */}
               <div className="flex justify-center md:justify-end">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-emerald-500/10 rounded-3xl blur-2xl scale-110" />
-                  <img
-                    src="/airvent_titan.png"
-                    alt="Airvent Node"
-                    className="relative w-full max-w-sm md:max-w-md object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-                  />
+                <div className="relative w-full max-w-md aspect-square rounded-3xl bg-slate-900/50 border border-slate-800 flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
+                  <img src="/airvent_titan.png" alt="Airvent Node" className="relative w-4/5 h-4/5 object-contain drop-shadow-2xl" />
                 </div>
               </div>
             </div>
           </Container>
         </section>
 
-        {/* ── Network Stats Banner ── */}
-        <section className="border-y border-slate-800 bg-slate-900/50">
+        {/* ── Problems Section ── */}
+        <section id="problems" className="py-24 bg-slate-900/20">
           <Container>
-            <div className="py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {tx.statsVal.map((val, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-3xl md:text-4xl font-black text-emerald-400 mb-1">{val}</div>
-                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-widest">{tx.statsLabel[i]}</div>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">왜 AirVent가 필요한가요?</h2>
+              <div className="grid gap-4">
+                {problems.map((p, i) => (
+                  <div key={i} className="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 text-left flex gap-4 items-start">
+                    <span className="text-emerald-500 font-bold">Q.</span>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ── Why Now Section (Positioning) ── */}
+        <section className="py-24 border-t border-slate-800/50">
+          <Container>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">현재 단계와 핵심 메시지</h2>
+              <p className="text-slate-400">AirVent는 지금 가장 중요한 지점을 지나고 있습니다.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {whyNowItems.map((item, i) => (
+                <div key={i} className="p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+                    {item.icon === "radar" && "📡"}
+                    {item.icon === "shield" && "🛡️"}
+                    {item.icon === "flask" && "🧪"}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -227,65 +340,98 @@ export default function LandingPage() {
         </section>
 
         {/* ── How It Works ── */}
-        <section id="how-it-works" className="py-24 scroll-mt-20">
+        <section className="py-24 bg-slate-900/10 border-t border-slate-800/50">
           <Container>
             <div className="text-center mb-16">
-              <div className="text-xs text-emerald-400 font-bold tracking-widest uppercase mb-2">Technical Process</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">{tx.howItWorksTitle}</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">작동 방식</h2>
+              <p className="text-slate-400">측정에서 기여까지의 과정</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {tx.steps.map((step, i) => (
-                <div key={i} className="relative group">
-                  <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 h-full hover:border-emerald-500/40 hover:bg-slate-800/50 transition-all">
-                    <div className="text-xs text-slate-600 font-bold mb-3 tracking-widest">{step.step}</div>
-                    <div className="text-3xl mb-4 grayscale group-hover:grayscale-0 transition-all">{step.icon}</div>
-                    <h3 className="text-base font-bold text-white mb-2">{step.title}</h3>
-                    <p className="text-sm text-slate-400 leading-relaxed">{step.desc}</p>
+            <div className="grid md:grid-cols-4 gap-6">
+              {howItWorksItems.map((step, i) => (
+                <div key={i} className="relative p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                  <div className="text-4xl mb-6">
+                    {step.icon === "home" && "🏠"}
+                    {step.icon === "activity" && "📈"}
+                    {step.icon === "shield" && "🛡️"}
+                    {step.icon === "wallet" && "💳"}
                   </div>
-                  {i < 3 && <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-slate-700" />}
+                  <div className="text-[10px] font-bold text-emerald-500 mb-2">STEP {step.step}</div>
+                  <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
           </Container>
         </section>
 
-        {/* ── Partners ── */}
-        <section className="py-16 border-t border-slate-800/60 bg-slate-900/30">
+        {/* ── Audience ── */}
+        <section className="py-24 border-t border-slate-800/50">
           <Container>
-            <div className="text-center mb-10">
-              <div className="text-xs text-slate-500 font-bold tracking-widest uppercase">{tx.partnerLabel}</div>
-            </div>
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-              {tx.partners.map((p, i) => (
-                <div key={i} className="px-5 py-2.5 rounded-full border border-slate-700 bg-slate-900 text-sm font-semibold text-slate-400 hover:border-emerald-500/40 hover:text-emerald-400 transition-colors cursor-default">
-                  {p}
+            <div className="grid md:grid-cols-2 gap-12">
+              {audienceItems.map((item, i) => (
+                <div key={i} className="p-10 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800">
+                  <div className="text-3xl mb-6">{item.icon === "wind" ? "🌬️" : "📚"}</div>
+                  <h3 className="text-2xl font-bold text-white mb-6">{item.title}</h3>
+                  <ul className="space-y-4">
+                    {item.points.map((p, j) => (
+                      <li key={j} className="flex items-start gap-3 text-slate-400 text-sm leading-relaxed">
+                        <span className="text-emerald-500 mt-1">✓</span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </Container>
         </section>
 
-        {/* ── Testimonials ── */}
-        <section className="py-24 border-t border-slate-800/60">
+        {/* ── Timeline & Benefits ── */}
+        <section className="py-24 bg-slate-900/20 border-t border-slate-800/50">
           <Container>
-            <div className="text-center mb-14">
-              <div className="text-xs text-sky-400 font-bold tracking-widest uppercase mb-2">{tx.testimonialLabel}</div>
-              <h2 className="text-3xl font-bold text-white">
-                {lang === "ko" ? "직접 경험한 사람들의 이야기" : "Stories from the Community"}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {tx.testimonials.map((t, i) => (
-                <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-slate-700 transition-all flex flex-col gap-5">
-                  <p className="text-slate-300 leading-relaxed text-sm flex-1">"{t.text}"</p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-slate-800">
-                    <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-sm flex-shrink-0">
-                      {t.avatar}
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-10">네트워크 타임라인</h3>
+                <div className="relative space-y-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-px before:bg-slate-800">
+                  {timelineItems.map((item, i) => (
+                    <div key={i} className="relative pl-10 flex items-center gap-4">
+                      <div className={`absolute left-0 w-6 h-6 rounded-full border-4 border-slate-950 ${i <= 2 ? "bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]" : "bg-slate-800"}`} />
+                      <p className={`text-sm font-medium ${i <= 2 ? "text-emerald-400" : "text-slate-500"}`}>{item}</p>
                     </div>
-                    <div>
-                      <div className="text-sm font-semibold text-slate-100">{t.name}</div>
-                      <div className="text-xs text-slate-500">{t.handle}</div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-10">참여 혜택</h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {benefitItems.map((item, i) => (
+                    <div key={i} className="p-5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium">
+                      {item}
                     </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ── Node Cards ── */}
+        <section className="py-24 border-t border-slate-800/50">
+          <Container>
+            <div className="grid md:grid-cols-2 gap-8">
+              {nodeCards.map((card, i) => (
+                <div key={i} className="group p-10 rounded-3xl bg-slate-900 border border-slate-800 hover:border-emerald-500/30 transition-all overflow-hidden relative">
+                  <div className="absolute top-0 right-0 p-8 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                    {i === 0 ? "📦" : "🖥️"}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{card.name}</h3>
+                  <p className="text-slate-400 mb-8 max-w-xs">{card.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {card.specs.map((s, j) => (
+                      <span key={j} className="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-[10px] font-bold border border-slate-700">
+                        {s}
+                      </span>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -293,84 +439,51 @@ export default function LandingPage() {
           </Container>
         </section>
 
-        {/* ── Pricing ── */}
-        <section className="py-24 border-t border-slate-800/60 bg-slate-900/30">
+        {/* ── Participation Options ── */}
+        <section id="participation" className="py-24 bg-slate-900/30 border-t border-slate-800/50">
           <Container>
-            <div className="text-center mb-14">
-              <div className="text-xs text-indigo-400 font-bold tracking-widest uppercase mb-2">{tx.pricingLabel}</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{tx.pricingTitle}</h2>
-              <p className="text-slate-400 max-w-xl mx-auto">{tx.pricingDesc}</p>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">참여 신청하기</h2>
+              <p className="text-slate-400">원하시는 방식을 선택하여 AirVent의 시작에 함께하세요.</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {tx.pricing.map((p, i) => (
-                <div key={i} className={`relative rounded-2xl border p-5 transition-all hover:-translate-y-1 ${i === 0 ? "border-emerald-500/50 bg-emerald-500/5" : "border-slate-800 bg-slate-950/60"}`}>
-                  {p.tag && (
-                    <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${i === 0 ? "bg-emerald-500 text-slate-950" : "bg-indigo-500 text-white"}`}>
-                      {p.tag}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {participationOptions.map((opt, i) => (
+                <div key={i} className={`p-8 rounded-3xl border flex flex-col ${opt.featured ? "border-emerald-500 bg-emerald-500/5 shadow-lg shadow-emerald-500/5" : "border-slate-800 bg-slate-950"}`}>
+                  <h3 className="text-xl font-bold text-white mb-4">{opt.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{opt.desc}</p>
+                  <button className={`w-full py-4 rounded-xl font-bold text-sm transition ${opt.featured ? "bg-emerald-500 text-slate-950 hover:bg-emerald-400" : "bg-slate-800 text-white hover:bg-slate-700"}`}>
+                    {opt.cta}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* ── Proof & FAQ ── */}
+        <section className="py-24 border-t border-slate-800/50">
+          <Container>
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-10">Proof Coming Soon</h3>
+                <div className="space-y-4">
+                  {proofItems.map((item, i) => (
+                    <div key={i} className="p-4 rounded-xl bg-slate-900/50 border border-slate-800 text-slate-500 text-sm italic">
+                      · {item}
                     </div>
-                  )}
-                  <div className="text-sm font-bold text-slate-300 mb-2 mt-1">{p.name}</div>
-                  <div className="text-2xl font-black text-white">{p.price}</div>
-                  <div className="text-xs text-slate-600 mt-1">per unit</div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <Link to="/node" className="inline-flex items-center gap-2 text-emerald-400 font-bold hover:text-emerald-300 transition-colors text-sm">
-                {tx.pricingCta}
-              </Link>
-            </div>
-          </Container>
-        </section>
-
-        {/* ── Network News ── */}
-        <section id="network-news" className="py-24 border-t border-slate-800/60 scroll-mt-20">
-          <Container>
-            <div className="text-center mb-14">
-              <div className="text-xs text-sky-400 font-bold tracking-widest uppercase mb-2">{tx.newsLabel}</div>
-              <h2 className="text-3xl font-bold text-white">{tx.newsTitle}</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {tx.news.map((n, i) => (
-                <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:bg-slate-800/50 hover:border-slate-700 transition-all group cursor-pointer">
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-1 rounded uppercase tracking-widest">{n.tag}</span>
-                    <span className="text-[10px] text-slate-500 font-bold">{n.date}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-100 mb-3 group-hover:text-emerald-400 transition-colors">{n.title}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed mb-5">{n.desc}</p>
-                  <div className="text-[10px] font-black text-slate-600 group-hover:text-white transition-colors uppercase tracking-tighter">
-                    Read More →
-                  </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-10">자주 묻는 질문</h3>
+                <div className="space-y-6">
+                  {faqs.map((faq, i) => (
+                    <div key={i}>
+                      <h4 className="text-slate-200 font-bold mb-2">Q. {faq.q}</h4>
+                      <p className="text-slate-400 text-sm leading-relaxed">{faq.a}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </Container>
-        </section>
-
-        {/* ── Final CTA Banner ── */}
-        <section className="py-20 border-t border-slate-800/60">
-          <Container>
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-950/80 to-slate-900 border border-emerald-500/20 p-12 text-center">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-sky-500 to-indigo-500" />
-              <div className="absolute inset-0 bg-emerald-500/3 pointer-events-none" />
-              <h2 className="relative text-3xl md:text-4xl font-black text-white mb-4">
-                {lang === "ko" ? "지금 바로 시작하세요" : "Start Earning Today"}
-              </h2>
-              <p className="relative text-slate-300 max-w-xl mx-auto mb-10">
-                {lang === "ko"
-                  ? "Airvent 노드 하나로 공기질 데이터를 수집하고, AIVT 토큰으로 보상받으세요."
-                  : "Deploy one Airvent node, collect hyperlocal air data, and earn AIVT rewards automatically."}
-              </p>
-              <div className="relative flex flex-wrap justify-center gap-4">
-                <Link to="/node"
-                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 text-slate-950 font-bold px-8 py-4 text-base hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/30 hover:-translate-y-0.5 transform">
-                  {lang === "ko" ? "노드 구매하기" : "Buy a Node"} →
-                </Link>
-                <Link to="/login"
-                  className="inline-flex items-center gap-2 rounded-xl border border-slate-600 text-slate-300 font-semibold px-8 py-4 text-base hover:border-slate-400 hover:text-white transition">
-                  {lang === "ko" ? "대시보드 시작" : "Open Dashboard"}
-                </Link>
               </div>
             </div>
           </Container>
