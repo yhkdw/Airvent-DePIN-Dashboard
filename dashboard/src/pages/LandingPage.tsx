@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Container from "../components/Container";
+import { isAuthed } from "../auth";
 
 const isLocal: boolean =
   window.location.hostname === "localhost" ||
@@ -106,8 +107,14 @@ type Lang = keyof typeof t;
 
 /* ─────────────── Component ─────────────── */
 export default function LandingPage() {
+  const navigate = useNavigate();
   const [lang, setLang] = useState<Lang>("ko");
+  const [authenticated, setAuthenticated] = useState(false);
   const tx = t[lang];
+
+  useEffect(() => {
+    isAuthed().then(setAuthenticated);
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -149,8 +156,8 @@ export default function LandingPage() {
                   </button>
                 ))}
               </div>
-              <Link to="/login" className="rounded-xl bg-emerald-500 text-slate-950 font-bold px-4 py-2 text-sm hover:bg-emerald-400 transition">
-                {tx.login}
+              <Link to={authenticated ? "/dashboard" : "/login"} className="rounded-xl bg-emerald-500 text-slate-950 font-bold px-4 py-2 text-sm hover:bg-emerald-400 transition">
+                {authenticated ? (lang === "ko" ? "대시보드" : "Dashboard") : tx.login}
               </Link>
             </div>
           </div>
@@ -183,9 +190,9 @@ export default function LandingPage() {
                     {tx.heroCta}
                     <span>→</span>
                   </Link>
-                  <Link to="/login"
+                  <Link to={authenticated ? "/dashboard" : "/login"}
                     className="inline-flex items-center gap-2 rounded-xl border border-slate-700 text-slate-300 font-semibold px-7 py-4 text-base hover:border-slate-500 hover:text-white transition">
-                    {tx.heroCtaSec}
+                    {authenticated ? (lang === "ko" ? "대시보드 시작" : "Go to Dashboard") : tx.heroCtaSec}
                   </Link>
                 </div>
               </div>
