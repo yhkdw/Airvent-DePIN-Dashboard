@@ -233,12 +233,6 @@ export default function LandingPage() {
               <Link to="/dashboard" className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 hover:bg-emerald-500/20 transition-all">
                 {lang === "ko" ? "대시보드 Demo" : "Dashboard Demo"}
               </Link>
-              {isLocal && (
-                <Link to="/judge" className="text-[10px] font-black text-sky-400 hover:text-sky-300 border border-sky-400/20 bg-sky-400/5 px-2.5 py-1.5 rounded-lg uppercase tracking-wider flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-                  AI Demo
-                </Link>
-              )}
             </nav>
 
             {/* Right controls */}
@@ -282,7 +276,7 @@ export default function LandingPage() {
                 <div className="flex flex-wrap gap-4">
                   <Link to="/node"
                     className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 text-slate-950 font-bold px-8 py-4 text-base hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5">
-                    {lang === "ko" ? "초기 유저 참여하기" : "Join as Early User"}
+                    {lang === "ko" ? "노드 신청하기" : "Apply for Node"}
                     <span>→</span>
                   </Link>
                   <a href="#problems" className="inline-flex items-center gap-2 rounded-xl border border-slate-700 text-slate-400 font-semibold px-8 py-4 text-base hover:border-slate-500 hover:text-white transition">
