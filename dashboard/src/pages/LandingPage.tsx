@@ -13,9 +13,9 @@ const t = {
     nav: { howItWorks: "작동 원리", news: "네트워크 소식", node: "노드 구매" },
     login: "로그인",
     heroEyebrow: "DEPIN AIR QUALITY NETWORK",
-    heroTitle: "숨쉬는 공기를\n수익으로 바꾸세요",
+    heroTitle: "실내 공기질을 측정하는 노드,\n이제 Testnet의 첫 기여자를 모집합니다",
     heroSub:
-      "Airvent 노드를 설치하면 실시간 공기질 데이터가 AI로 검증되어 AIVT 토큰으로 보상됩니다. 누구나, 어디서나.",
+      "AirVent는 집·사무실·실내 공간의 공기질을 측정하는 스마트 노드입니다. 노드 출시와 Devnet 검증을 마친 지금, 제품 사용자이자 초기 네트워크 기여자로 함께할 첫 유저를 모집하고 있습니다.",
     heroCta: "노드 구매하기",
     heroCtaSec: "대시보드 둘러보기",
     statsLabel: ["설치된 노드", "측정 도시", "네트워크 참여자", "지급된 AIVT"],
@@ -59,9 +59,9 @@ const t = {
     nav: { howItWorks: "How it Works", news: "Network News", node: "Buy Node" },
     login: "Login",
     heroEyebrow: "DEPIN AIR QUALITY NETWORK",
-    heroTitle: "Breathe Clean.\nEarn Rewards.",
+    heroTitle: "A Node for Indoor Air Quality,\nRecruiting Testnet Early Contributors",
     heroSub:
-      "Install an Airvent node and turn real-time air quality data into AIVT token rewards — AI-verified, Solana-powered. Anyone, anywhere.",
+      "AirVent is a smart node that measures air quality in homes, offices, and indoor spaces. Following our Devnet verification, we are now recruiting the first users to join as product users and early network contributors.",
     heroCta: "Buy a Node",
     heroCtaSec: "Explore Dashboard",
     statsLabel: ["Nodes Installed", "Cities Covered", "Network Participants", "AIVT Distributed"],
